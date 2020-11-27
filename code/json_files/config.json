@@ -1,0 +1,19 @@
+{
+    "config": [
+        {
+            "weatherkey": ""
+        },
+        {
+            "newskey": ""
+        },
+        {
+            "log_file": "./logs/logfile"
+        },
+        {
+            "weather_city_or_town": ""
+        },
+        {
+            "Area_location": ""
+        }
+    ]
+}

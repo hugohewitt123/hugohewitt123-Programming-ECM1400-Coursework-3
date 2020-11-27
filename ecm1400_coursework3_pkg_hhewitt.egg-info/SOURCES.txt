@@ -1,0 +1,15 @@
+README.md
+setup.py
+code/__init__.py
+code/alarm.py
+code/covid.py
+code/linterCA3.py
+code/main.py
+code/news.py
+code/organise_dictionaries.py
+code/time_conversions.py
+code/weather.py
+ecm1400_coursework3_pkg_hhewitt.egg-info/PKG-INFO
+ecm1400_coursework3_pkg_hhewitt.egg-info/SOURCES.txt
+ecm1400_coursework3_pkg_hhewitt.egg-info/dependency_links.txt
+ecm1400_coursework3_pkg_hhewitt.egg-info/top_level.txt
