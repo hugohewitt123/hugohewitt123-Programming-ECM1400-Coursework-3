@@ -122,7 +122,6 @@ once this has been done. Navigate to the site that is returned it should look li
 
 # Developer Documentation:
 
-
 # Details:
 © 2020 Hugo Hewitt (hh538@exeter.ac.uk)
 html template: Matt Collison
