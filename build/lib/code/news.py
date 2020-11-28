@@ -4,6 +4,8 @@ import json
 import requests
 from time_conversions import current_time_hhmm, log
 
+lst = []
+
 def news():
     '''This function does the api call to the news website and it gets
     the api key from the config json file, then it returns the json file
@@ -12,7 +14,9 @@ def news():
     for i in range(length):
         if current_time_hhmm()[i] == ":":
             start = i+1
-    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '':
+    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
+        if len(lst) == 0:
+            lst.append('1')
         #setting the base url
         base_url = "https://newsapi.org/v2/top-headlines?"
         #getting the user key from the config json file
