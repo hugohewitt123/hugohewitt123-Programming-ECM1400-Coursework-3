@@ -38,6 +38,7 @@
     As a one command line: "pip install flask multiexit logger schedule pyttsx3 pylint requests pytest"
 
 # Getting started:
+    Navigate to the 'code' folder
 ## Config file:
         This should be a file located in the json_files folder in the code folder (./code/json_files)
         The file should be set out like this:
