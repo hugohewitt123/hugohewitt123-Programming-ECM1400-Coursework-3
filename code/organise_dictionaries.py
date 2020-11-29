@@ -7,6 +7,8 @@ import json
 from flask import Markup
 from time_conversions import current_time_hhmm, log
 
+lst = []
+
 def write_json(data):
     '''This function opens the notification json file
     and then adds the data passed to the function
@@ -26,8 +28,11 @@ def org_func(covid, weather, articles):
     if current_time_hhmm()[start:] == '':
         with open('./json_files/seen.json','w') as jfile:
             json.dump({'notifications':[]}, jfile, indent=4)
-    #this wil update the notifications collumn ever 15 mins
-    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '':
+    #this will update the notifications collumn every 15 mins or when the function is first called
+    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
+        #updating the list if it is the first time the function is called
+        if len(lst) == 0:
+            lst.append('1')
         length = len(articles)
         i = 0
         #this will loop through every item (article) in articles
