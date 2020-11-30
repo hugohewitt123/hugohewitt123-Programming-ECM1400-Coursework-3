@@ -27,87 +27,85 @@ all at once.
 
 # Installation:
 The list of modules that you will need to 'pip install':  
-	1. flask
-	2. multiexit
-	3. logger
-	4. schedule
-	5. pyttsx3
-	6. pylint
-	7. requests
-	8. pytest
+    1. flask  
+    2. multiexit  
+    3. logger  
+    4. schedule  
+    5. pyttsx3  
+    6. pylint  
+    7. requests  
+    8. pytest  
 As a one command line: "pip install flask multiexit logger schedule pyttsx3 pylint requests pytest"
 
 # Getting started:
 Navigate to the 'code' folder
 ## Config file:
-This should be a file located in the json_files folder in the code folder (./code/json_files)
-The file should be set out like this:
-{
-"config": [
-{
-	"weatherkey": "your_weather_api_key"
-	},
-{
-	"newskey": "your_news_api_key"
-	},
-{
-	"log_file": "./file/log_file"
-	},
-{
-	"weather_city_or_town": "your_city_or_town"
-	},
-{
-	"Area_location": "your_region_Eg.'South West"
-	}
-	]
-}
--For the weather key you will need to sign up for the free weather api and request a key, http://api.openweathermap.org
--For the news key you will need to sign up for the free news api and request a key, https://newsapi.org
+This should be a file located in the json_files folder in the code folder (./code/json_files)  
+The file should be set out like this:  
+{  
+"config": [  
+{  
+    "weatherkey": "your_weather_api_key"  
+    },  
+{  
+    "newskey": "your_news_api_key"  
+    },  
+{  
+    "log_file": "./file/log_file"  
+    },  
+{  
+    "weather_city_or_town": "your_city_or_town"  
+    },  
+{  
+    "Area_location": "your_region_Eg.'South West"  
+    }  
+    ]  
+}  
+-For the weather key you will need to sign up for the free weather api and request a key, http://api.openweathermap.org  
+-For the news key you will need to sign up for the free news api and request a key, https://newsapi.org  
 -For the log file, enter the location you want the log file to be stored. I suggest a place so you can easily find and look at
-it, if anything goes wrong. Also do NOT add an extension to the end of the file (as shown in the example above).
--For the weather city or town, just enter the city or town that you live in the uk, make sure it starts with a capital letter.
--For the area location, enter the region or city/town or area that you live in the uk, eg. South West or Exeter, and make sure
-that the starts of the words are capitalised.
--The regions are:
-	1. Scotland
-	2. Northern Ireland
-	3. Wales
-	4. North East
-	5. North West
-	6. Yorkshire and the Humber
-	7. West Midlands
-	8. East Midlands
-	9. South West
-	10. South East
-	11. East of England
-	12. London
-To be more specific you can put your cicty or council area that you live in, enter your postcode into this BBC site to
-find your area name: https://www.bbc.co.uk/news/uk-51768274
+it, if anything goes wrong. Also do NOT add an extension to the end of the file (as shown in the example above).  
+-For the weather city or town, just enter the city or town that you live in the uk, make sure it starts with a capital letter.  
+-For the area location, enter the region or city/town or area that you live in the uk, eg. South West or Exeter, and make sure that the starts of the words are capitalised.  
+-The regions are:  
+    1. Scotland  
+    2. Northern Ireland  
+    3. Wales  
+    4. North East  
+    5. North West  
+    6. Yorkshire and the Humber  
+    7. West Midlands  
+    8. East Midlands  
+    9. South West  
+    10. South East  
+    11. East of England  
+    12. London  
+To be more specific you can put your cicty or council area that you live in, enter your postcode into this BBC site to find your area name: https://www.bbc.co.uk/news/uk-51768274
 ## alarms file:
-This should be a file located in the json_files folder in the code folder (./code/json_files)
-The file should be set out like this:
-{
-	"alarms": []
-}
+This should be a file located in the json_files folder in the code folder (./code/json_files)  
+The file should be set out like this:  
+{  
+    "alarms": []  
+}  
 ## notifications file:
-This should be a file located in the json_files folder in the code folder (./code/json_files)
-The file should be set out like this:
-{
-	"notifications": []
-}
+This should be a file located in the json_files folder in the code folder (./code/json_files)  
+The file should be set out like this:  
+{  
+    "notifications": []  
+}  
 ## seen file:
-This should be a file located in the json_files folder in the code folder (./code/json_files)
-The file should be set out like this:
-{
-	"notifications": []
-}
+This should be a file located in the json_files folder in the code folder (./code/json_files)  
+The file should be set out like this:  
+{  
+    "notifications": []  
+}  
 
 ## The Log file:
 It is formatted such that at the start of each line will be the time that that event was logged and after will be what is being
-logged
+logged  
 Eg: "2020-11-25 23:46:43,716 articles retrieved -- <Response [200]>" or for the html logs: "2020-11-25 23:46:43,803 127.0.0.1
-[25/Nov/2020 23:46:43] [37mGET /index HTTP/1.1[0m 200]" for the website updates, at the end of the html log (and also the
-response from the api log) there is the code that the site is giving back
+[25/Nov/2020 23:46:43] [37mGET /index HTTP/1.1[0m 200]"  
+At the end of the html log (and also the response from the api log) there is the code that the site is giving back.  
 Here are a list of codes that can be sent back and what they mean: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 The most common ones: '200 OK', '201 Created', '204 No Content', '304 Not Modified', '400 Bad Request', '401 Unauthorized',
 '403 Forbidden', '404 Not Found', '409 Conflict' and '500 Internal Server Error'
@@ -115,9 +113,9 @@ The most common ones: '200 OK', '201 Created', '204 No Content', '304 Not Modifi
 To start the program after all of the above has been run the 'main.py' file with python the the command line (or in an IDE),
 once this has been done. Navigate to the site that is returned it should look like this ('http://127.0.0.1:5000/')
 ## To note:
--You cannot set two alarms for the same time and date.
--You cannot set alarms for in the past.
--You can delete the notifications but they are refreshed ever hour with new ones.
+-You cannot set two alarms for the same time and date.  
+-You cannot set alarms for in the past.  
+-You can delete the notifications but they are refreshed ever hour with new ones.  
 
 # Testing:
 ## TBA
@@ -126,6 +124,6 @@ once this has been done. Navigate to the site that is returned it should look li
 
 
 # Details:
-© 2020 Hugo Hewitt (hh538@exeter.ac.uk)
-html template: Matt Collison
+© 2020 Hugo Hewitt (hh538@exeter.ac.uk)  
+html template: Matt Collison  
 https://github.com/hugohewitt123/Programming-ECM1400-Coursework-3
