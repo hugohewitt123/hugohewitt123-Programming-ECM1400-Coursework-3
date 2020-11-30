@@ -26,7 +26,7 @@ You will also need an internet connection, and the modules listed below. There i
 all at once.
 
 # Installation:
-The list of modules that you will need to 'pip install':
+The list of modules that you will need to 'pip install':  
 	1. flask
 	2. multiexit
 	3. logger
