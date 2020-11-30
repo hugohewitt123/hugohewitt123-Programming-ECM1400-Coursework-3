@@ -59,7 +59,7 @@ The file should be set out like this:
 {
     "Area_location": "your_region_Eg.'South West"
     }
-    ]
+	 ]
 }
 -For the weather key you will need to sign up for the free weather api and request a key, http://api.openweathermap.org
 -For the news key you will need to sign up for the free news api and request a key, https://newsapi.org
