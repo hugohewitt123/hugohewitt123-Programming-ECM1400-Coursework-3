@@ -66,7 +66,8 @@ The file should be set out like this:
 -For the log file, enter the location you want the log file to be stored. I suggest a place so you can easily find and look at
 it, if anything goes wrong. Also do NOT add an extension to the end of the file (as shown in the example above).
 -For the weather city or town, just enter the city or town that you live in the uk, make sure it starts with a capital letter.
--For the area location, enter the region that you live in the uk, eg. South West, and make sure that the starts of the words
+-For the area location, enter the region or city/town or area that you live in the uk, eg. South West or Exeter, and make sure
+that the starts of the words
 are capitalised.
 -The regions are:
     1. Scotland
@@ -81,6 +82,8 @@ are capitalised.
     10. South East
     11. East of England
     12. London
+To be more specific you can put your cicty or council area that you live in, enter your postcode into this BBC site to
+find your area name: https://www.bbc.co.uk/news/uk-51768274
 ## alarms file:
 This should be a file located in the json_files folder in the code folder (./code/json_files)
 The file should be set out like this:
@@ -121,6 +124,7 @@ once this has been done. Navigate to the site that is returned it should look li
 ## TBA
 
 # Developer Documentation:
+
 
 # Details:
 © 2020 Hugo Hewitt (hh538@exeter.ac.uk)
