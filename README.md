@@ -115,7 +115,7 @@ once this has been done. Navigate to the site that is returned it should look li
 ## To note:
 -You cannot set two alarms for the same time and date.  
 -You cannot set alarms for in the past.  
--You can delete the notifications but the file containing delete notifications is deleted every hour. And the notifications are updated every 15 minutes  
+-You can delete the notifications but the notifications are updated every 15 minutes with new ones.  
 
 # Testing:
 ## TBA
