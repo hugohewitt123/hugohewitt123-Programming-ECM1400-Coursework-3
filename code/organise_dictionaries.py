@@ -24,12 +24,14 @@ def org_func(covid, weather, articles):
     for i in range(length):
         if current_time_hhmm()[i] == ":":
             start = i+1
-    #refreshing the seen file so it doesn't contain irrelevent info
+    #refreshing the seen file so it doesn't contain irrelevent info, and because by ever hour\
+    #normally all of the nes has been updated and the data in the seen file is different to the\
+    #new nes anyway
     if current_time_hhmm()[start:] == '':
         with open('./json_files/seen.json','w') as jfile:
             json.dump({'notifications':[]}, jfile, indent=4)
-    #this will update the notifications collumn every 15 mins or when the function is first called
-    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
+    #this wil update the notifications collumn every 15 mins or when the function is first called
+    if int(current_time_hhmm()[start:])%15==0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
         #updating the list if it is the first time the function is called
         if len(lst) == 0:
             lst.append('1')
@@ -51,23 +53,27 @@ def org_func(covid, weather, articles):
         articles.insert(0, dic)
         #chekcing if there has been weather data inputted and that there hasn't been an error
         if weather != [] and weather["cod"] == 200:
-            #setting mweather to the main attributes of the weather input
-            mweather = weather["main"]
+            #setting weath to the main attributes of the weather input
+            weath = weather["main"]
             #getting the tempurature
-            current_temp = mweather["temp"]
+            current_temp = weath["temp"]
             #getting the pressure
-            current_press = mweather["pressure"]
+            current_press = weath["pressure"]
             #getting the humidity
-            current_humid = mweather["humidity"]
-            #setting mweather to the weather attribute of the weather input
-            mweather = weather["weather"]
-            #getting the description from the weather input (from mweather)
-            weather_desc = mweather[0]["description"]
+            current_humid = weath["humidity"]
+            #setting weath to the weather attribute of the weather input
+            weath = weather["weather"]
+            #getting the description from the weather input (from weath)
+            weather_desc = weath[0]["description"]
+            #getting the wind speed
+            weath = weather["wind"]
             #concatonating all the variables gathered on weather into one string with\
             #more descriptions of them
-            description = "temp in celsius = " + str(int(current_temp - 273.15)) +\
-                "\n; atmospheric pressure in hPa = "+ str(current_press) + "\n; humidity in % = " +\
-                    str(current_humid) + "\n; description = " + str(weather_desc)
+            description = "The temperature outside is "+str(int(current_temp - 273.15))\
+                + " degrees centigrade; The atmospheric pressure is "\
+                    + str(current_press) + "hPa; The humidity is " + str(current_humid) +\
+                        "%; The wind speed is "+str(weath['speed'])+"m/s; And it is "+\
+                            str(weather_desc)
             #putting this description into a dictionary with the other informaiont about weather
             wdic = {'title': 'Weather in Exeter', 'content': description, 'url': ''}
             #adding this dictionary to articles
