@@ -120,8 +120,8 @@ once this has been done. Navigate to the site that is returned it should look li
 # Testing:
 ## TBA
 
-# Developer Documentation:
-
+# Developer Documentation:  
+See "/docs/build/html/index.html" for more information about what modules and functions do.  
 
 # Details:
 © 2020 Hugo Hewitt (hh538@exeter.ac.uk)  
