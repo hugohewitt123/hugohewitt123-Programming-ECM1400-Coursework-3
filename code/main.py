@@ -71,7 +71,7 @@ def index():
         alarmj = add_alarm(alarm, name, temp, temp, covid, pick_news, pick_weather)
     if name is None:
         #checking and refreshing the alarms to the latest weather, news and covid info
-        refresh(covid,articles,weather)
+        alarmj = refresh(covid,articles,weather)
     #putting all the updates (covid,news,weather) into one dictionary\
     #to be passed to the html as notifications
     organised = org_func(covid, weather, articles)
