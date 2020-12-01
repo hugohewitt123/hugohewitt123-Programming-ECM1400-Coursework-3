@@ -3,6 +3,7 @@ and also holds to log function'''
 import time
 import json
 import logging
+from datetime import date
 
 def minutes_to_seconds( minutes: str ) -> int:
     """Converts minutes to seconds"""
@@ -26,8 +27,7 @@ def current_time_hhmm():
 
 def current_date():
     '''returns the current date'''
-    return str(str(time.gmtime().tm_year) + "-" + str(time.gmtime().tm_mon)\
-        + "-" + str(time.gmtime().tm_mday))
+    return str(date.today())
 
 def hhmmss_to_seconds( hhmmss: str ) -> int:
     '''returns the input time (hhmmss) in seconds'''
