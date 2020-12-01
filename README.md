@@ -119,7 +119,7 @@ once this has been done. Navigate to the site that is returned it should look li
 
 # Testing:
 To run the pytest programs, navigate to the alarm_code folder and open a terminal window there. Once there run the command
-"python -m pytest". This will then give you a report of teh tests and if they passed or failed.  
+"python -m pytest". This will then give you a report of the tests and if they passed or failed.  
 
 # Developer Documentation:  
 See "/docs/build/html/index.html" for more information about what modules and functions do.  
