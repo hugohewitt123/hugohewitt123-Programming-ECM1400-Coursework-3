@@ -11,11 +11,10 @@ def get_covid():
     with open("./json_files/config.json", "r") as jfile:
         key = json.load(jfile)
         key = key["config"]
-        region_name = key[4]['Area_location']
+        area_name = key[4]['Area_location']
     #concatonating the url fro teh api call, involving the location and the structure\
     #which is, area name, date, new cases & new deaths
-    complete_url = 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=region;areaName='\
-        + region_name + '&structure={"areaName":"areaName","date":"date",'\
+    complete_url = 'https://api.coronavirus.data.gov.uk/v1/data?filters=areaName='+ area_name +'&structure={"areaName":"areaName","date":"date",'\
             +'"newCases":"newCasesByPublishDate","newDeaths":"newDeaths28DaysByPublishDate"}'
     #trying to get the data from the api call, if it can't
     #it will return failed so that the program can continue
