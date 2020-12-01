@@ -16,7 +16,7 @@ def news():
         if current_time_hhmm()[i] == ":":
             start = i+1
     #only getting the news from the api every 15 mins, or when the function is first called
-    if int(current_time_hhmm()[start:])%15 == 0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
+    if int(current_time_hhmm()[start:])%15==0 or current_time_hhmm()[start:] == '' or len(lst) == 0:
         if len(lst) == 0:
             lst.append('1')
         #setting the base url
