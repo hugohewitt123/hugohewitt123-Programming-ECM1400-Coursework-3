@@ -78,12 +78,15 @@ def add_alarm(alarm,name,weather,article,covid,pick_news,pick_weather):
             weath = weather["weather"]
             #getting the description from the weather input (from weath)
             weather_desc = weath[0]["description"]
+            #gettign the wind speed
+            weath = weather["wind"]
             #concatonating all the variables gathered on weather into one string with\
             #more descriptions of them
-            weather = "Weather update: the temperature outside is "+str(int(current_temp - 273.15))\
-                + "degrees centigrade; the atmospheric pressure is "\
-                    + str(current_press) + "hectopascals; the humidity is " + str(current_humid) +\
-                        "percent; and it is " + str(weather_desc)
+            weather = "The temperature outside is "+str(int(current_temp - 273.15))\
+                + "degrees centigrade; The atmospheric pressure is "\
+                    + str(current_press) + "hectopascals; The humidity is " + str(current_humid) +\
+                        "percent; The wind speed is "+str(weath['speed'])+\
+                            "metres per second; And it is "+str(weather_desc)
             #adding this to the newname variable
             new_name = str(new_name) + ".  '''''''' " + str(weather)
         #inputting to the alarm that there is an error if false weather data is added to an alarm
@@ -126,15 +129,15 @@ def add_alarm(alarm,name,weather,article,covid,pick_news,pick_weather):
             return end()
         #saying the event if it is set for the time now\
         #and if the date on the alarm is the same as todays date
-        if alarm[:10] == current_date() and delay == 0:
+        if alarm[:10] == current_date() and int(delay) == 0:
             print_job_name(alarm,name,weather,article,covid)
         #Not adding the alarm if it is set in the past
-        elif alarm[:10] == current_date() and delay < 0:
+        elif alarm[:10] == current_date() and int(delay) < 0:
             log("alarm " + alarm +" is set in the past")
             remove_alarm(alarm, True)
         #only adding an item to the scheduler if it has less than 60 seconds\
         #and if the date on the alarm is the same as todays date
-        elif alarm[:10] == current_date() and 0 < delay < 61:
+        elif alarm[:10] == current_date() and 0 < int(delay) < 61:
             lst.append(s.enter(int(delay), 1, print_job_name, [alarm,name,weather,article,covid,]))
             #logging that the alarm has been added to the scheduler
             log("alarm "+ alarm +" added to the scheduler")
@@ -187,6 +190,7 @@ def refresh(covid,articles,weather):
             add_alarm(alarm, content, temp, articles, covid, incl_news, incl_weather)
         else:
             add_alarm(alarm, content, temp, temp, covid, incl_news, incl_weather)
+    return end()
 
 def remove_alarm(title, status=False):
     '''This function opens the json file for the alarms and
