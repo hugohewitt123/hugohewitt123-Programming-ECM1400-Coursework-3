@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ecm1400-coursework3-pkg-hhewitt",
+    name="ecm1400_coursework3_pkg_hhewitt",
     version="0.0.1",
     author="Hugo Hewitt",
     author_email="hh538@exeter.ac.uk",
