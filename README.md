@@ -127,4 +127,5 @@ See "/docs/build/html/index.html" for more information about what modules and fu
 # Details:
 © 2020 Hugo Hewitt (hh538@exeter.ac.uk)  
 html template: Matt Collison  
-https://github.com/hugohewitt123/Programming-ECM1400-Coursework-3
+https://github.com/hugohewitt123/Programming-ECM1400-Coursework-3  
+For the package version: https://test.pypi.org/project/ecm1400coursework3Pkghhewitt/  
