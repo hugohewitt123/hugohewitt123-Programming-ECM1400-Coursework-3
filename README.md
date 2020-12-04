@@ -40,7 +40,7 @@ As a one command line: "pip install flask multiexit logger schedule pyttsx3 pyli
 # Getting started:
 Navigate to the 'code' folder
 ## Config file:
-This should be a file located in the json_files folder in the code folder (./code/json_files)  
+This should be a file located in the json_files folder in the code folder (./alarm_code/json_files)  
 The file should be set out like this:  
 {  
 "config": [  
@@ -108,9 +108,9 @@ Eg: "2020-11-25 23:46:43,716 articles retrieved -- <Response [200]>" or for the 
 At the end of the html log (and also the response from the api log) there is the code that the site is giving back.  
 Here are a list of codes that can be sent back and what they mean: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 The most common ones: '200 OK', '201 Created', '204 No Content', '304 Not Modified', '400 Bad Request', '401 Unauthorized',
-'403 Forbidden', '404 Not Found', '409 Conflict' and '500 Internal Server Error'
+'403 Forbidden', '404 Not Found', '409 Conflict' and '500 Internal Server Error'  
 ## Running the code:
-To start the program after all of the above has been run the 'main.py' file with python the the command line (or in an IDE),
+To start the program after all of the above has been done,  run the 'main.py' file with python the the command line (or in an IDE),
 once this has been done. Navigate to the site that is returned it should look like this ('http://127.0.0.1:5000/')
 ## To note:
 -You cannot set two alarms for the same time and date.  
